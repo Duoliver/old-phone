@@ -9,34 +9,34 @@ export default function Keyboard() {
       <div className="upper-buttons">
         <ButtonRow 
           buttonLabels={[
-            '—', '^', '—'
+            '—', 'up', '—'
           ]}
         />
         <ButtonRow 
           buttonLabels={[
-            'c', 'v', 'h'
+            'call', 'down', 'hang'
           ]}
         />
       </div>
       <div className="number-buttons">
         <ButtonRow 
           buttonLabels={[
-            '1', '2', '3'
+            '1.', '2abc', '3def'
           ]}
         />
         <ButtonRow 
           buttonLabels={[
-            '4', '5', '6'
+            '4ghi', '5jkl', '6mno'
           ]}
         />
         <ButtonRow 
           buttonLabels={[
-            '7', '8', '9'
+            '7pqrs', '8tuv', '9wxyz'
           ]}
         />
         <ButtonRow 
           buttonLabels={[
-            '*', '0', '#'
+            '*', '0_', '#'
           ]}
           variant="bottom"
         />
