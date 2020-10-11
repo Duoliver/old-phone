@@ -2,6 +2,7 @@ import React from 'react'
 import Keyboard from './Keyboard'
 
 import './phone.scss'
+import Screen from './Screen/Screen'
 
 export default function Phone() {
   return (
@@ -10,7 +11,12 @@ export default function Phone() {
 
       </div>
       <div className="screen-container">
-
+        <div className="screen-border">
+          <div className="brand">
+            KONIA
+          </div>
+          <Screen />
+        </div>
       </div>
       <div className="keyboard-container">
         <Keyboard />
