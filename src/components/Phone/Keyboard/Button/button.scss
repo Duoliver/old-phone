@@ -5,4 +5,14 @@ button {
     background-color: #444;
     margin: 1px;
     border-radius: 5px;
+    color: lightblue;
+    font-family: "Heebo";
+
+    &.round-bottom-left {
+        border-bottom-left-radius: 15px;
+    }
+
+    &.round-bottom-right {
+        border-bottom-right-radius: 15px;
+    }
 }

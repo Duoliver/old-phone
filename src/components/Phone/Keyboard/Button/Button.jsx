@@ -9,19 +9,21 @@ export default function Button({
   variant
 }) {
   return (
-  <button>{children}</button>
+  <button className={variant}>
+    {children}
+  </button>
   )
 }
 
 Button.propTypes = {
   variant: propTypes.string,
-  children: propTypes.oneOf([
+  children: propTypes.oneOfType([
     propTypes.node,
-    propTypes.string
+    propTypes.string,
   ]),
 }
 
 Button.defaultProps = {
   variant: '',
-  children: ''
+  children: '',
 }

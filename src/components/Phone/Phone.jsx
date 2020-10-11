@@ -13,7 +13,7 @@ export default function Phone() {
       <div className="screen-container">
         <div className="screen-border">
           <div className="brand">
-            KONIA
+            konia
           </div>
           <Screen />
         </div>
