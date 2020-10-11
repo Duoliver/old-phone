@@ -3,40 +3,54 @@ import ButtonRow from './ButtonRow'
 
 import './keyboard.scss'
 
-export default function Keyboard() {
+export default function Keyboard({
+  pressNumber
+}) {
   return (
     <div className="keyboard">
       <div className="upper-buttons">
-        <ButtonRow 
-          buttonLabels={[
-            '—', 'up', '—'
+        <ButtonRow
+          buttons={[
+            { label: '—' },
+            { label: 'up' },
+            { label: '—' },
           ]}
         />
         <ButtonRow 
-          buttonLabels={[
-            'call', 'down', 'hang'
+          buttons={[
+            { label: 'call' },
+            { label: 'down' },
+            { label: 'hang' },
           ]}
         />
       </div>
       <div className="number-buttons">
-        <ButtonRow 
-          buttonLabels={[
-            '1.', '2abc', '3def'
+        <ButtonRow
+          buttons={[
+            { label: '1', action: () => pressNumber(1) },
+            { label: '2', action: () => pressNumber(2) },
+            { label: '3', action: () => pressNumber(3) },
+          ]}
+        />
+        <ButtonRow
+          buttons={[
+            { label: '4', action: () => pressNumber(4) },
+            { label: '5', action: () => pressNumber(5) },
+            { label: '6', action: () => pressNumber(6) },
           ]}
         />
         <ButtonRow 
-          buttonLabels={[
-            '4ghi', '5jkl', '6mno'
+          buttons={[
+            { label: '7', action: () => pressNumber(7) },
+            { label: '8', action: () => pressNumber(8) },
+            { label: '9', action: () => pressNumber(9) },
           ]}
         />
         <ButtonRow 
-          buttonLabels={[
-            '7pqrs', '8tuv', '9wxyz'
-          ]}
-        />
-        <ButtonRow 
-          buttonLabels={[
-            '*', '0_', '#'
+          buttons={[
+            { label: '*', action: () => pressNumber('*') },
+            { label: '0', action: () => pressNumber(0) },
+            { label: '#', action: () => pressNumber('#') },
           ]}
           variant="bottom"
         />
