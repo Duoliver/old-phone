@@ -14,9 +14,11 @@
     width: 100%;
   }
 
-  .earthing-container {
+  .receiver-container {
     flex: 1;
-    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .screen-container {
