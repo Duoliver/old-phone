@@ -6,10 +6,14 @@ import './button.scss'
 
 export default function Button({
   children,
-  variant
+  variant,
+  action,
 }) {
   return (
-  <button className={variant}>
+  <button 
+    className={variant}
+    onClick={action}
+  >
     {children}
   </button>
   )
@@ -26,4 +30,5 @@ Button.propTypes = {
 Button.defaultProps = {
   variant: '',
   children: '',
+  action: () => {},
 }
