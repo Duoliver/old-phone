@@ -25,6 +25,7 @@ Button.propTypes = {
     propTypes.node,
     propTypes.string,
   ]),
+  action: propTypes.func,
 }
 
 Button.defaultProps = {

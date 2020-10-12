@@ -4,16 +4,18 @@ import ButtonRow from './ButtonRow'
 import './keyboard.scss'
 
 export default function Keyboard({
-  pressNumber
+  pressNumber,
+  leftAction,
+  rightAction
 }) {
   return (
     <div className="keyboard">
       <div className="upper-buttons">
         <ButtonRow
           buttons={[
-            { label: '—' },
+            { label: '—', action: leftAction },
             { label: 'up' },
-            { label: '—' },
+            { label: '—', action: rightAction },
           ]}
         />
         <ButtonRow 
@@ -57,4 +59,9 @@ export default function Keyboard({
       </div>
     </div>
   )
+}
+
+Keyboard.defaultProps = {
+  leftAction: () => {},
+  rightAction: () => {}
 }
