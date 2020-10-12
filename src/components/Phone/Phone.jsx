@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import metadata from '../../constants/metadata'
 import Keyboard from './Keyboard'
 
 import './phone.scss'
@@ -28,7 +29,7 @@ export default function Phone() {
       </div>
       <div className="screen-container">
         <div className="screen-border">
-          <div className="brand">konia</div>
+          <div className="brand">{metadata.BRAND}</div>
           <Screen>{number}</Screen>
         </div>
       </div>
