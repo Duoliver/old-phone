@@ -1,0 +1,15 @@
+.alert-full-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: inherit;
+
+    &:first-child {
+        flex: 5;
+    }
+
+    &:last-child {
+        flex: 2;
+    }
+}
