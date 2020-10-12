@@ -14,6 +14,6 @@ export default function ActionFooter({
 }
 
 ActionFooter.defaultProps = {
-  leftOptionName: 'Menu',
-  rightOptionName: 'Contatos'
+  leftOptionName: 'leftop',
+  rightOptionName: ''
 }

@@ -31,7 +31,10 @@ export default function Screen({children}) {
           ) : (
             children
           )}
-        <ActionFooter />
+        <ActionFooter 
+          leftOptionName={children ? 'Voltar' : 'Menu'}
+          rightOptionName={children ? 'Apagar' : 'Contatos'}
+        />
       </div>
     </div>
   )

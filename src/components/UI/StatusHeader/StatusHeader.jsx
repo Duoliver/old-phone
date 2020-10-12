@@ -2,7 +2,6 @@ import React from 'react'
 
 import './statusHeader.scss'
 export default function StatusHeader({statuses, time}) {
-  console.log(time)
   return (
     <div className="status-header">
       <div className="icons">

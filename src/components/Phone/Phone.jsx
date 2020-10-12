@@ -13,6 +13,14 @@ export default function Phone() {
     setNumber(number + pressed)
   }
 
+  const eraseNumber = () => {
+    setNumber(number.slice(0, -1))
+  }
+
+  const goBack = () => {
+    setNumber('')
+  }
+
   return (
     <div className="shell">
       <div className="receiver-container">
@@ -27,6 +35,8 @@ export default function Phone() {
       <div className="keyboard-container">
         <Keyboard 
           pressNumber={pressNumber}
+          leftAction={number ? goBack : null}
+          rightAction={number ? eraseNumber : null}
         />
       </div>
     </div>
