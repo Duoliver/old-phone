@@ -10,11 +10,12 @@ import './screen.scss'
 
 export default function Screen({children}) {
 
-  const [datetime, setDatetime] = useState(moment(new Date()).subtract(16, 'years'))
+  const past = 15
+  const [datetime, setDatetime] = useState(moment(new Date()).subtract(past, 'years'))
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDatetime(moment(new Date()).subtract(16, 'years'))
+      setDatetime(moment(new Date()).subtract(past, 'years'))
     }, 60000)
     return () => clearInterval(interval)
   }, [])
