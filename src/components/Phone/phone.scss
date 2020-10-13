@@ -1,11 +1,8 @@
-@import "../../constants/colours.scss";
-
-
 .shell {
   height: 480px;
   width: 220px;
-  background-color: $gray-3;
-  border: 10px solid $gray-2d;
+  background-color: #333;
+  border: 10px solid #2d2d2d;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -37,7 +34,7 @@
       display: flex;
       width: 95%;
       height: 95%;
-      background-color: $gray-1;
+      background-color: #111;
       border-radius: 10px;
       padding: 0 .5em;
       flex-direction: column;
@@ -45,7 +42,7 @@
       .brand {
         width: 100%;
         text-align: center;
-        color: $logo-colour;
+        color: white;
         line-height: 200%;
         font-weight: 500;
         margin-bottom: .25em;
