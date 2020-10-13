@@ -27,6 +27,10 @@ export default function Phone() {
     setAlertMessage(message)
   }
 
+  const clearAlert = () => {
+    setAlertMessage('')
+  }
+
   return (
     <div className="shell">
       <div className="receiver-container">
@@ -37,6 +41,7 @@ export default function Phone() {
           <div className="brand">{metadata.BRAND}</div>
           <Screen
             alertMessage={alertMessage}
+            clearAlert={clearAlert}
           >
             {number}
           </Screen>

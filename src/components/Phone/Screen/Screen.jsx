@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState, useEffect} from 'react'
 
 import ActionFooter from '../../UI/ActionFooter/ActionFooter'
@@ -12,11 +13,12 @@ import AlertFullScreen from '../../UI/AlertFullScreen/AlertFullScreen'
 export default function Screen({
   children,
   alertMessage,
+  clearAlert,
 }) {
 
   const past = 15
   const [datetime, setDatetime] = useState(moment(new Date()).subtract(past, 'years'))
-  const [alert, setAlert] = useState(true)
+  const [alert, setAlert] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,6 +36,8 @@ export default function Screen({
   useEffect(() => {
     if (alert) {
       setTimeout(() => setAlert(false), 2000)
+    } else {
+      clearAlert()
     }
   }, [alert])
 
