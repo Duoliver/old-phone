@@ -1,11 +1,14 @@
+@import "../../../../constants/colours.scss";
+
+
 button {
     flex: 1;
     border: none;
     outline: none;
-    background-color: #444;
+    background-color: $keyboard-button-colour;
     margin: 1px;
     border-radius: 5px;
-    color: lightblue;
+    color: $lightblue;
     font-family: "Heebo";
 
     &.round-bottom-left {

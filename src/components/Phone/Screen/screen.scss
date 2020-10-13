@@ -1,5 +1,8 @@
+@import "../../../constants/colours.scss";
+
+
 .screen {
-    background-color: lightgreen;
+    background-color: $lightgreen;
     border-radius: 7px;
     font-family: "VT323";
     vertical-align: bottom;
