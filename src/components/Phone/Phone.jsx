@@ -8,6 +8,7 @@ import Screen from './Screen'
 
 export default function Phone() {
   const [number, setNumber] = useState('')
+  const [alertMessage, setAlertMessage] = useState('')
 
   const pressNumber = (num) => {
     const pressed = String(num)
@@ -22,6 +23,10 @@ export default function Phone() {
     setNumber('')
   }
 
+  const showAlert = (message) => {
+    setAlertMessage(message)
+  }
+
   return (
     <div className="shell">
       <div className="receiver-container">
@@ -30,7 +35,11 @@ export default function Phone() {
       <div className="screen-container">
         <div className="screen-border">
           <div className="brand">{metadata.BRAND}</div>
-          <Screen>{number}</Screen>
+          <Screen
+            alertMessage={alertMessage}
+          >
+            {number}
+          </Screen>
         </div>
       </div>
       <div className="keyboard-container">
@@ -38,6 +47,7 @@ export default function Phone() {
           pressNumber={pressNumber}
           leftAction={number ? goBack : null}
           rightAction={number ? eraseNumber : null}
+          showAlert={showAlert}
         />
       </div>
     </div>

@@ -9,7 +9,10 @@ import moment from 'moment'
 import './screen.scss'
 import AlertFullScreen from '../../UI/AlertFullScreen/AlertFullScreen'
 
-export default function Screen({children}) {
+export default function Screen({
+  children,
+  alertMessage,
+}) {
 
   const past = 15
   const [datetime, setDatetime] = useState(moment(new Date()).subtract(past, 'years'))
@@ -21,6 +24,12 @@ export default function Screen({children}) {
     }, 60000)
     return () => clearInterval(interval)
   }, [])
+
+  useEffect(() => {
+    if (alertMessage) {
+      setAlert(true)
+    }
+  }, [alertMessage])
 
   useEffect(() => {
     if (alert) {
@@ -48,7 +57,7 @@ export default function Screen({children}) {
       ) : (
         <div className="alert-container">
           <AlertFullScreen
-            text="Apenas chamadas de emergência"
+            text={alertMessage}
             icon="[!]"
           />
         </div>
