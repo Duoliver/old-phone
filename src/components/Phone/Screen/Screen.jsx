@@ -22,6 +22,12 @@ export default function Screen({children}) {
     return () => clearInterval(interval)
   }, [])
 
+  useEffect(() => {
+    if (alert) {
+      setTimeout(() => setAlert(false), 2000)
+    }
+  }, [alert])
+
   return (
     <div className="screen">
       {!alert ? (
