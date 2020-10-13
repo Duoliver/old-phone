@@ -6,7 +6,8 @@ import './keyboard.scss'
 export default function Keyboard({
   pressNumber,
   leftAction,
-  rightAction
+  rightAction,
+  showAlert
 }) {
   return (
     <div className="keyboard">
@@ -14,15 +15,15 @@ export default function Keyboard({
         <ButtonRow
           buttons={[
             { label: '—', action: leftAction },
-            { label: 'up' },
+            { label: 'up', action: () => showAlert('Pressed UP')},
             { label: '—', action: rightAction },
           ]}
         />
         <ButtonRow 
           buttons={[
-            { label: 'call' },
-            { label: 'down' },
-            { label: 'hang' },
+            { label: 'call', action: () => showAlert('Pressed CALL') },
+            { label: 'down', action: () => showAlert('Pressed DOWN') },
+            { label: 'hang', action: () => showAlert('Pressed HANG') },
           ]}
         />
       </div>
